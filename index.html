@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Phishing Awareness Simulator</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>🔒 Phishing Radar: Are You Alert Enough?</h1>
+    <h3><p class="subtitle">Review each item and choose <strong>Phishing</strong> or <strong>Safe</strong>.</p></h3>
+  </header>
+
+  <!-- START SCREEN -->
+  <main id="screen-start" class="screen">
+    <div class="card start-card">
+  <h2 id="start-title">Loading...</h2>
+  <p>🎣 Phishing is the art of tricking you into clicking, sharing, or paying — can you spot the traps?</p>
+  <p>🕵️ This quiz trains your cyber-radar to tell “Phish” from “Safe.”</p>
+  <p>⚡ Instant feedback shows the red flags you missed — so you learn as you play.</p>
+  <p>🏆 Your score unlocks badges that reveal how sharp your instincts really are.</p>
+
+  <div class="actions">
+    <button id="btn-start" class="btn primary">Start</button>
+  </div>
+</div>
+
+  </main>
+
+  <!-- GAME SCREEN -->
+  <main id="screen-game" class="screen hidden" aria-live="polite">
+    <div class="topbar">
+      <div id="progress" class="progress">Item <span id="idx">1</span>/<span id="total">10</span></div>
+      <div id="scorebox" class="scorebox">Score: <span id="score">0</span></div>
+    </div>
+
+    <article id="scenario-card" class="card" aria-labelledby="scenario-title">
+      <h2 id="scenario-title">Scenario</h2>
+
+      <!-- Scenario content area (populated by JS) -->
+      <div id="scenario-content" class="scenario"></div>
+
+      <div class="actions">
+        <button id="btn-phish" class="btn danger" aria-label="Mark as phishing">Phishing</button>
+        <button id="btn-safe" class="btn success" aria-label="Mark as safe">Safe</button>
+      </div>
+
+      <!-- Feedback area -->
+      <div id="feedback" class="feedback hidden" role="status" aria-live="assertive">
+        <p id="feedback-result" class="feedback-result"></p>
+        <ul id="feedback-reasons" class="reasons"></ul>
+        <button id="btn-next" class="btn">Next</button>
+      </div>
+    </article>
+  </main>
+
+  <!-- RESULTS SCREEN -->
+  <main id="screen-results" class="screen hidden">
+    <div class="card">
+      <h2>Your Results</h2>
+      <p class="final-score">Score: <strong id="final-score"></strong></p>
+      <div id="badge" class="badge"></div>
+
+      <section>
+        <h3>Your blind spots</h3>
+        <ul id="blindspots" class="blindspots"></ul>
+      </section>
+
+      <section>
+        <h3>Actionable tips</h3>
+        <ul class="tips">
+          <li>Hover or long-press to preview the <strong>actual URL</strong>. Check for misspellings or odd domains.</li>
+          <li>Beware of <strong>urgency</strong>, <strong>threats</strong>, and <strong>unexpected requests</strong> for credentials or payments.</li>
+          <li>Avoid links in suspicious emails; go to the site by typing the official domain yourself.</li>
+          <li>Never send <strong>gift cards</strong> or passwords over email/SMS. Report suspicious emails.</li>
+        </ul>
+      </section>
+
+      <div class="results-actions">
+        <button id="btn-replay" class="btn primary">Play again</button>
+        <a id="share-link" class="btn ghost" href="#" target="_blank" rel="noopener">Share</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <small>Built for security awareness. No real data collected.</small>
+  </footer>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
