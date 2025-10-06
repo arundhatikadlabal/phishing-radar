@@ -1,0 +1,343 @@
+[
+  // ---------- EASY ----------
+  {
+    "type": "email",
+    "isPhish": false,
+    "content": {
+      "fromDisplay": "Google",
+      "fromEmail": "no-reply@google.com",
+      "subject": "Security alert: New sign-in detected",
+      "body": "We detected a sign-in from a new device.",
+      "links": [
+        { "text": "Review Activity", "href": "https://myaccount.google.com/security" }
+      ]
+    },
+    "reasons": ["official-domain"]
+  },
+  {
+    "type": "email",
+    "isPhish": true,
+    "content": {
+      "fromDisplay": "Netflix Billing",
+      "fromEmail": "help@netflixbilling-support.com",
+      "subject": "Update payment method",
+      "body": "Your payment failed. Update your details immediately.",
+      "links": [
+        { "text": "Update Now", "href": "http://netflixbilling-support.com" }
+      ]
+    },
+    "reasons": ["lookalike-domain", "urgency"]
+  },
+  {
+    "type": "sms",
+    "isPhish": false,
+    "content": {
+      "fromDisplay": "Swiggy",
+      "body": "Your order #993 is out for delivery."
+    },
+    "reasons": ["expected-context"]
+  },
+  {
+    "type": "sms",
+    "isPhish": true,
+    "content": {
+      "fromDisplay": "BankAlert",
+      "body": "Your card will be blocked. Verify now: http://icicbank-update.in"
+    },
+    "reasons": ["lookalike-domain", "http-not-https", "urgency"]
+  },
+  {
+    "type": "email",
+    "isPhish": false,
+    "content": {
+      "fromDisplay": "PES University",
+      "fromEmail": "examoffice@pes.edu",
+      "subject": "Exam schedule release",
+      "body": "Dear student, the exam timetable has been uploaded on the portal."
+    },
+    "reasons": ["official-domain"]
+  },
+
+  // Add 15 more easy
+  {
+    "type": "email", "isPhish": true,
+    "content": {
+      "fromDisplay": "Instagram Support",
+      "fromEmail": "help@insta-secure.net",
+      "subject": "Your account violated policy",
+      "body": "Click below to restore your profile.",
+      "links":[{"text":"Appeal","href":"http://insta-secure.net"}]
+    },
+    "reasons":["lookalike-domain","urgency"]
+  },
+  {
+    "type":"email","isPhish":false,
+    "content":{
+      "fromDisplay":"Microsoft",
+      "fromEmail":"noreply@microsoft.com",
+      "subject":"Login from new device",
+      "body":"Was this you? No action required if yes."
+    },
+    "reasons":["official-domain"]
+  },
+  {
+    "type":"sms","isPhish":true,
+    "content":{"fromDisplay":"Airtel",
+      "body":"You won 10GB free! Claim http://airtel-offer.net"},
+    "reasons":["too-good-to-be-true","lookalike-domain"]
+  },
+  {
+    "type":"sms","isPhish":false,
+    "content":{"fromDisplay":"Zomato","body":"Your delivery partner is on the way."},
+    "reasons":["expected-context"]
+  },
+  {
+    "type":"email","isPhish":true,
+    "content":{"fromDisplay":"Flipkart Gift",
+      "fromEmail":"promo@flipkart-offers.com",
+      "subject":"Win ₹5000 gift card",
+      "body":"You’re selected! Claim your prize.",
+      "links":[{"text":"Redeem","href":"http://flipkart-offers.com"}]},
+    "reasons":["too-good-to-be-true","lookalike-domain"]
+  },
+  {
+    "type":"email","isPhish":false,
+    "content":{"fromDisplay":"LinkedIn",
+      "fromEmail":"no-reply@linkedin.com",
+      "subject":"New message from recruiter",
+      "body":"Hi! I viewed your profile recently."},
+    "reasons":["official-domain"]
+  },
+  {
+    "type":"email","isPhish":true,
+    "content":{"fromDisplay":"IRCTC Alert",
+      "fromEmail":"tickets@irctc-verify.in",
+      "subject":"IRCTC account blocked",
+      "body":"Verify immediately to continue booking.",
+      "links":[{"text":"Verify","href":"http://irctc-verify.in"}]},
+    "reasons":["lookalike-domain","urgency"]
+  },
+  {
+    "type":"sms","isPhish":true,
+    "content":{"fromDisplay":"SBI",
+      "body":"Get instant loan! Apply http://sbiloanfast.in"},
+    "reasons":["lookalike-domain","too-good-to-be-true"]
+  },
+  {
+    "type":"email","isPhish":false,
+    "content":{"fromDisplay":"GitHub",
+      "fromEmail":"noreply@github.com",
+      "subject":"Security alert",
+      "body":"New login from Chrome on Windows."},
+    "reasons":["official-domain"]
+  },
+  {
+    "type":"email","isPhish":true,
+    "content":{"fromDisplay":"Amazon Support",
+      "fromEmail":"support@amazonrefund-help.in",
+      "subject":"Claim your refund now!",
+      "body":"Click here to claim ₹1000 refund.",
+      "links":[{"text":"Claim","href":"http://amazonrefund-help.in"}]},
+    "reasons":["promise-of-money","lookalike-domain"]
+  },
+  {
+    "type":"sms","isPhish":false,
+    "content":{"fromDisplay":"Ola","body":"Your cab driver is arriving soon."},
+    "reasons":["expected-context"]
+  },
+  {
+    "type":"email","isPhish":true,
+    "content":{"fromDisplay":"COVID Helpdesk",
+      "fromEmail":"relief@covidfund-gov.in",
+      "subject":"Claim ₹10,000 benefit",
+      "body":"Apply now before deadline!",
+      "links":[{"text":"Apply","href":"http://covidfund-gov.in"}]},
+    "reasons":["too-good-to-be-true","lookalike-domain"]
+  },
+  {
+    "type":"email","isPhish":false,
+    "content":{"fromDisplay":"Coursera",
+      "fromEmail":"no-reply@coursera.org",
+      "subject":"Course completion certificate ready",
+      "body":"Download your verified certificate."},
+    "reasons":["official-domain"]
+  },
+  {
+    "type":"email","isPhish":true,
+    "content":{"fromDisplay":"YouTube",
+      "fromEmail":"support@ytclaim.net",
+      "subject":"Copyright strike issued",
+      "body":"Appeal immediately to avoid channel deletion.",
+      "links":[{"text":"Appeal","href":"http://ytclaim.net"}]},
+    "reasons":["urgency","lookalike-domain"]
+  },
+  {
+    "type":"email","isPhish":false,
+    "content":{"fromDisplay":"Spotify","fromEmail":"no-reply@spotify.com",
+      "subject":"Receipt for your Premium plan","body":"Your renewal is confirmed."},
+    "reasons":["official-domain"]
+  },
+
+  // ---------- MEDIUM ----------
+  {
+    "type":"email","isPhish":true,
+    "content":{"fromDisplay":"Bank of India",
+      "fromEmail":"alerts@boi-update.net",
+      "subject":"Confirm your KYC today",
+      "body":"Your KYC is expiring soon. Click below to update.",
+      "links":[{"text":"Update KYC","href":"http://boi-update.net"}]},
+    "reasons":["urgency","lookalike-domain","sensitive-info-request"]
+  },
+  {
+    "type":"email","isPhish":true,
+    "content":{"fromDisplay":"PayPal",
+      "fromEmail":"service@paypalsecure-login.com",
+      "subject":"Unusual login attempt detected",
+      "body":"Login now to verify.",
+      "links":[{"text":"Secure Account","href":"http://paypalsecure-login.com"}]},
+    "reasons":["lookalike-domain","login-request"]
+  },
+  {
+    "type":"email","isPhish":false,
+    "content":{"fromDisplay":"Slack","fromEmail":"feedback@slack.com",
+      "subject":"Workspace activity digest","body":"Your team has 2 unread messages."},
+    "reasons":["official-domain"]
+  },
+  {
+    "type":"email","isPhish":true,
+    "content":{"fromDisplay":"RBI","fromEmail":"info@rbi-gov-refund.in",
+      "subject":"Tax refund available!","body":"Claim ₹5,000 refund now.",
+      "links":[{"text":"Claim Refund","href":"http://rbi-gov-refund.in"}]},
+    "reasons":["lookalike-domain","promise-of-money"]
+  },
+  {
+    "type":"sms","isPhish":true,
+    "content":{"fromDisplay":"Facebook",
+      "body":"Your page violated copyright. Fix at http://fb-verifynow.net"},
+    "reasons":["lookalike-domain","urgency"]
+  },
+
+  // Add 15 more medium
+  {
+    "type":"email","isPhish":true,
+    "content":{"fromDisplay":"HDFC Support",
+      "fromEmail":"security@hdfcnet.in",
+      "subject":"Suspicious login attempt",
+      "body":"Confirm identity to avoid suspension.",
+      "links":[{"text":"Confirm","href":"http://hdfcnet.in"}]},
+    "reasons":["lookalike-domain","urgency"]
+  },
+  {
+    "type":"email","isPhish":false,
+    "content":{"fromDisplay":"Google Drive","fromEmail":"drive-share@google.com",
+      "subject":"File shared with you","body":"Click to open shared file."},
+    "reasons":["official-domain"]
+  },
+  {
+    "type":"sms","isPhish":true,
+    "content":{"fromDisplay":"GovPortal",
+      "body":"Your PAN update request failed. Fix: http://gov-verify.in"},
+    "reasons":["lookalike-domain","http-not-https"]
+  },
+  {
+    "type":"email","isPhish":true,
+    "content":{"fromDisplay":"CryptoWallet",
+      "fromEmail":"support@crypto-wallet.io",
+      "subject":"Verify wallet login",
+      "body":"Click link to reconnect wallet access.",
+      "links":[{"text":"Connect","href":"http://crypto-wallet.io"}]},
+    "reasons":["wallet-connect","login-request"]
+  },
+  {
+    "type":"email","isPhish":false,
+    "content":{"fromDisplay":"Coursera",
+      "fromEmail":"updates@coursera.org",
+      "subject":"New course recommendations","body":"Check new data science tracks."},
+    "reasons":["official-domain"]
+  },
+
+  // ---------- HARD ----------
+  {
+    "type":"email","isPhish":true,
+    "content":{"fromDisplay":"Company Admin",
+      "fromEmail":"admin@internal-support.co",
+      "subject":"Policy update: New payroll form",
+      "body":"Please sign attached payroll form today.",
+      "links":[{"text":"View Form","href":"http://internal-support.co"}]},
+    "reasons":["external-sender","unusual-request"]
+  },
+  {
+    "type":"email","isPhish":true,
+    "content":{"fromDisplay":"AWS",
+      "fromEmail":"billing@aws-security.net",
+      "subject":"Unpaid invoice detected",
+      "body":"Pay now to avoid account lock.",
+      "links":[{"text":"Pay Now","href":"http://aws-security.net"}]},
+    "reasons":["lookalike-domain","threat"]
+  },
+  {
+    "type":"email","isPhish":false,
+    "content":{"fromDisplay":"Razorpay","fromEmail":"alerts@razorpay.com",
+      "subject":"Monthly transaction report","body":"Attached is your billing summary."},
+    "reasons":["official-domain"]
+  },
+  {
+    "type":"email","isPhish":true,
+    "content":{"fromDisplay":"CEO",
+      "fromEmail":"ceo@companygmail.com",
+      "subject":"Immediate wire transfer needed",
+      "body":"Transfer ₹75,000 to supplier within the hour.",
+      "links":[]},
+    "reasons":["urgency","unusual-request","external-sender"]
+  },
+  {
+    "type":"email","isPhish":true,
+    "content":{"fromDisplay":"Apple",
+      "fromEmail":"help@apple-securelogin.com",
+      "subject":"Apple ID locked","body":"Sign in to unlock.",
+      "links":[{"text":"Unlock","href":"http://apple-securelogin.com"}]},
+    "reasons":["lookalike-domain","threat"]
+  },
+
+  {
+    "type":"email","isPhish":false,
+    "content":{"fromDisplay":"Canva",
+      "fromEmail":"no-reply@canva.com",
+      "subject":"New template pack","body":"Explore trending design ideas."},
+    "reasons":["official-domain"]
+  },
+  {
+    "type":"email","isPhish":true,
+    "content":{"fromDisplay":"IT Desk",
+      "fromEmail":"itdesk@corp-service.net",
+      "subject":"VPN access update",
+      "body":"Re-enter credentials for continued VPN access.",
+      "links":[{"text":"Login","href":"http://corp-service.net"}]},
+    "reasons":["external-sender","login-request"]
+  },
+  {
+    "type":"email","isPhish":true,
+    "content":{"fromDisplay":"Tata Motors",
+      "fromEmail":"career@tatamotors-jobs.in",
+      "subject":"Job offer confirmation",
+      "body":"Submit ₹500 for verification.",
+      "links":[{"text":"Pay Now","href":"http://tatamotors-jobs.in"}]},
+    "reasons":["promise-of-money","lookalike-domain"]
+  },
+  {
+    "type":"email","isPhish":true,
+    "content":{"fromDisplay":"CyberCell",
+      "fromEmail":"alert@cybercell-gov.in",
+      "subject":"Complaint received",
+      "body":"Open attached file to view report."},
+    "reasons":["unfamiliar-domain","external-sender"]
+  },
+  {
+    "type":"email","isPhish":false,
+    "content":{"fromDisplay":"HackerRank",
+      "fromEmail":"challenges@hackerrank.com",
+      "subject":"Coding contest tomorrow",
+      "body":"Register now to participate."},
+    "reasons":["official-domain"]
+  }
+]
