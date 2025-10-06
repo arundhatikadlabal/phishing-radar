@@ -1,0 +1,258 @@
+[
+  {
+    "type": "email",
+    "isPhish": true,
+    "content": {
+      "fromDisplay": "BankAlert",
+      "fromEmail": "security@icicibank-secure.in",
+      "subject": "Urgent: Account Suspended!",
+      "body": "Your account will be frozen in 24 hours. Please login and verify your credentials.",
+      "links": [
+        { "text": "Login Now", "href": "http://icicibank-secure.in" }
+      ]
+    },
+    "reasons": ["urgency", "lookalike-domain", "login-request"]
+  },
+  {
+    "type": "email",
+    "isPhish": false,
+    "content": {
+      "fromDisplay": "Zoom",
+      "fromEmail": "no-reply@zoom.us",
+      "subject": "Your Zoom meeting invite",
+      "body": "Meeting at 5PM. Join with the official link.",
+      "links": [
+        { "text": "Join Meeting", "href": "https://zoom.us/j/123456789" }
+      ]
+    },
+    "reasons": ["official-domain", "expected-context"]
+  },
+  {
+    "type": "email",
+    "isPhish": true,
+    "content": {
+      "fromDisplay": "Netflix Support",
+      "fromEmail": "support@netflix-billing.com",
+      "subject": "Payment failed!",
+      "body": "Your Netflix payment failed. Click below to update your billing info.",
+      "links": [
+        { "text": "Update Payment", "href": "http://netflix-billing.com" }
+      ]
+    },
+    "reasons": ["lookalike-domain", "sensitive-info-request"]
+  },
+  {
+    "type": "email",
+    "isPhish": false,
+    "content": {
+      "fromDisplay": "HR Department",
+      "fromEmail": "hr@company.com",
+      "subject": "Team meeting notes",
+      "body": "Please find the meeting notes attached. Let me know if any changes are needed.",
+      "links": []
+    },
+    "reasons": ["official-domain"]
+  },
+  {
+    "type": "email",
+    "isPhish": true,
+    "content": {
+      "fromDisplay": "Amazon",
+      "fromEmail": "support@amazon-helpdesk.com",
+      "subject": "Refund available!",
+      "body": "You have a pending refund. Click below to claim.",
+      "links": [
+        { "text": "Claim Refund", "href": "http://amazon-helpdesk.com/refund" }
+      ]
+    },
+    "reasons": ["lookalike-domain", "promise-of-money"]
+  },
+  {
+    "type": "email",
+    "isPhish": false,
+    "content": {
+      "fromDisplay": "Amazon",
+      "fromEmail": "no-reply@amazon.in",
+      "subject": "Your order has been shipped",
+      "body": "Track your package using the link below.",
+      "links": [
+        { "text": "Track Package", "href": "https://amazon.in/track" }
+      ]
+    },
+    "reasons": ["official-domain", "expected-context"]
+  },
+  {
+    "type": "email",
+    "isPhish": true,
+    "content": {
+      "fromDisplay": "IT Support",
+      "fromEmail": "it@company-support.com",
+      "subject": "Password Reset Required",
+      "body": "Your password will expire today. Reset now to keep access.",
+      "links": [
+        { "text": "Reset Password", "href": "http://company-support.com/reset" }
+      ]
+    },
+    "reasons": ["urgency", "external-sender", "login-request"]
+  },
+  {
+    "type": "sms",
+    "isPhish": true,
+    "content": {
+      "fromDisplay": "SBI Bank",
+      "body": "Your card is blocked. Click http://sbi-verify.in to unblock immediately."
+    },
+    "reasons": ["http-not-https", "lookalike-domain", "urgency"]
+  },
+  {
+    "type": "sms",
+    "isPhish": false,
+    "content": {
+      "fromDisplay": "Paytm",
+      "body": "Your wallet has been credited with ₹100 cashback."
+    },
+    "reasons": ["expected-context"]
+  },
+  {
+    "type": "email",
+    "isPhish": true,
+    "content": {
+      "fromDisplay": "Google Security",
+      "fromEmail": "alerts@google-secure.net",
+      "subject": "New login detected!",
+      "body": "We noticed a new sign-in. Click below to verify if it was you.",
+      "links": [
+        { "text": "Verify Now", "href": "http://google-secure.net/login" }
+      ]
+    },
+    "reasons": ["lookalike-domain", "urgency", "login-request"]
+  },
+  {
+    "type": "email",
+    "isPhish": true,
+    "content": {
+      "fromDisplay": "Microsoft Support",
+      "fromEmail": "admin@ms-supportportal.com",
+      "subject": "License expired!",
+      "body": "Your Microsoft Office license has expired. Renew now to avoid interruption.",
+      "links": [
+        { "text": "Renew License", "href": "http://ms-supportportal.com" }
+      ]
+    },
+    "reasons": ["lookalike-domain", "threat"]
+  },
+  {
+    "type": "email",
+    "isPhish": false,
+    "content": {
+      "fromDisplay": "LinkedIn",
+      "fromEmail": "no-reply@linkedin.com",
+      "subject": "You have a new connection request",
+      "body": "Someone wants to connect with you on LinkedIn.",
+      "links": [
+        { "text": "View Profile", "href": "https://linkedin.com/invitation" }
+      ]
+    },
+    "reasons": ["official-domain"]
+  },
+  {
+    "type": "email",
+    "isPhish": true,
+    "content": {
+      "fromDisplay": "Flipkart",
+      "fromEmail": "offers@flipkart-prize.com",
+      "subject": "You’ve won a free phone!",
+      "body": "Congratulations! Click to claim your free iPhone.",
+      "links": [
+        { "text": "Claim Gift", "href": "http://flipkart-prize.com" }
+      ]
+    },
+    "reasons": ["too-good-to-be-true", "lookalike-domain"]
+  },
+  {
+    "type": "email",
+    "isPhish": true,
+    "content": {
+      "fromDisplay": "Company CEO",
+      "fromEmail": "ceo@gmail.com",
+      "subject": "Urgent: Need a transfer now!",
+      "body": "I need ₹50,000 transferred immediately for a client deal. Do not tell anyone.",
+      "links": []
+    },
+    "reasons": ["urgency", "unusual-request", "external-sender"]
+  },
+  {
+    "type": "email",
+    "isPhish": false,
+    "content": {
+      "fromDisplay": "GitHub",
+      "fromEmail": "noreply@github.com",
+      "subject": "New login from Chrome on Windows",
+      "body": "If this was you, no action needed. Otherwise, review your account activity.",
+      "links": [
+        { "text": "Review Activity", "href": "https://github.com/sessions" }
+      ]
+    },
+    "reasons": ["official-domain"]
+  },
+  {
+    "type": "sms",
+    "isPhish": true,
+    "content": {
+      "fromDisplay": "IncomeTaxDept",
+      "body": "You are eligible for a refund of ₹15,000. Click https://tax-refund-gov.in to claim now!"
+    },
+    "reasons": ["promise-of-money", "lookalike-domain"]
+  },
+  {
+    "type": "sms",
+    "isPhish": false,
+    "content": {
+      "fromDisplay": "Swiggy",
+      "body": "Your order #556 is out for delivery. Tap the app to track live."
+    },
+    "reasons": ["expected-context"]
+  },
+  {
+    "type": "email",
+    "isPhish": true,
+    "content": {
+      "fromDisplay": "COVID Helpdesk",
+      "fromEmail": "health@covidrelief-gov.in",
+      "subject": "Claim your COVID relief fund",
+      "body": "Eligible citizens can claim ₹10,000. Apply immediately.",
+      "links": [
+        { "text": "Apply Here", "href": "http://covidrelief-gov.in" }
+      ]
+    },
+    "reasons": ["too-good-to-be-true", "lookalike-domain"]
+  },
+  {
+    "type": "email",
+    "isPhish": false,
+    "content": {
+      "fromDisplay": "Google",
+      "fromEmail": "no-reply@google.com",
+      "subject": "Security alert: New sign-in from Chrome",
+      "body": "We detected a sign-in from a new device.",
+      "links": [
+        { "text": "Check Activity", "href": "https://myaccount.google.com/security-checkup" }
+      ]
+    },
+    "reasons": ["official-domain"]
+  },
+  {
+    "type": "email",
+    "isPhish": true,
+    "content": {
+      "fromDisplay": "Apple Support",
+      "fromEmail": "support@apple-security.com",
+      "subject": "Your Apple ID is locked!",
+      "body": "Unlock your Apple ID immediately by logging in.",
+      "links": [
+        { "text": "Unlock ID", "href": "http://apple-security.com/login" }
+      ]
+    },
+    "reasons": ["lookalike-domain", "threat"]
+  }
+]
